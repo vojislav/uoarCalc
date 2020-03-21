@@ -1,0 +1,55 @@
+Brojcani sistemi:
+------------------
+	- prevodjenje mesovitih/celih brojeva u/iz:
+		-- iz osnove N u M, sa medjuprevodom u dekadni
+		   (jer zajebi bez medjuprevoda)
+
+		-- iz N u M, gde N i M imaju isti koren
+	Problemi:
+		- pri prevodjenju iz dekadnog, paznja na zapis koji se periodicno ponavlja
+
+	Obratiti paznju na:
+		- sisteme kao balansirani troicni
+
+Zapis oznacenih brojeva:
+-------------------------
+	- prebacivanje izmedju/sabiranje/oduzimanje
+		-- znak i apsolutna vrednost
+		-- nepotpuni komplement
+		-- potpuni komplement
+		-- visak k
+
+	- mnozenje poz i neg oznac brojeva (vrv mogu oba preko Butovog)
+
+	- deljenje poz i neg oznac brojeva
+
+BCD:
+------
+	- sabiranje i oduzimanje:
+		-- kod 8421
+		-- visak 3
+
+Grejov kod (ovo na kraju)
+---------------------------
+
+IEEE754:
+-----------
+	- prebacinje u/iz:
+		-- binary32, binary64
+		-- decimal32 - DPD i BID
+		-- heksadekadna osnova
+
+	- aritmetika u binary32
+
+	SPECIJALNE VREDNOSTI!!!
+
+RBS:
+------
+	- aritmetikcke operacije (osim deljenja)
+
+Otkrivanje i korekcija gresaka:
+---------------------------------
+	- CRC (ono sa polinomom i deljenjem)
+
+	- Hamming SEC (kontrolni bitovi i sranja)
+
