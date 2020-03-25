@@ -1,0 +1,41 @@
+TODO:
+--------------
+!!! periodicno ponavljanje !!!
+- ne radi prevodjenje u dek. iz racionalne osnove (npr. 0.5)
+- ubaci balansirani troicni
+
+TEST PRIMERI:
+---------------
+za iz dekadnog:
+-- 3129 10 8 - radi
+-- 3129 10 2 - radi
+-- 3129 10 16 - radi
+-- 842 10 16 - radi
+-- 3620 10 7 - radi
+-- 928 10 16 - radi
+-- 534 10 8 - radi
+-- 753 10 7 - radi
+-- 549 10 5 - radi
+-- 891 10 8 - radi
+-- 938 10 16 - radi
+-- 0.5625 10 2 - radi
+-- 0.375 10 4 - radi
+--
+
+za u dekadni:
+-- 1110110 2 10 - radi
+-- 2013 -3 10 - radi
+-- 214 -5 10 - radi
+-- 143.12 8 10 - radi
+-- 1A2C.48 16 10 - radi
+-- 110.32 4 10 - radi
+-- 1011010010 2 10 - radi
+-- 233.12 8 10 - radi
+-- 2C 16 10 - radi
+-- FFFF 16 10 - radi
+-- 1(−1)100(−1) bt 10 - NE!!!
+-- 762.32 0.5 10 - NE!!!
+-- 110101.11 2 10 - radi
+-- 110101.11 -2 10 - radi
+-- 2A1B 16 10 - radi
+-- 2512 8 10 - radi

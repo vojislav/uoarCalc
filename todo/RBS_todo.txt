@@ -1,0 +1,31 @@
+- kad prevede prevede brojeve da ih stavi u listu da mogu da se koriste za aritmetiku
+- napraviti funkciju za ispis - tako mogu iz bilo koje f-je njoj da prosledim da ispise iz nekog niza
+	, takodje ce olaksati ispis sistema u koji se prebacuje
+
+TEST PRIMERI:
+----------------
+
+Prevodjenje:
+----------------
+-- 3, 5 3 2, 83 -- radi
+-- 2, 6 5, 46 -- radi
+-- 3, 9 7 4, 538 -- radi
+-- 3, 7 4 3, 157 -- radi
+-- 3, 5 3 2, -83 -- radi
+-- 3, 9 7 4, -538 -- radi
+-- 3, 7 4 3, -157 -- radi
+
+Sabiranje:
+-----------------
+-- 3, 7 5 3, 3 2 2, 4 1 1 -- radi
+-- 4, 11 7 5 2, 9 5 2 0, 4 6 3 1 -- radi
+
+Oduzimanje:
+-----------------
+-- 3, 7 5 3, 3 2 2, 4 1 1 -- radi
+-- 4, 11 7 5 2, 9 5 2 0, 4 6 3 1 -- radi
+
+Mnozenje:
+-----------------
+-- 3, 7 5 3, 3 2 2, 4 1 1 -- radi
+-- 4, 11 7 5 2, 9 5 2 0, 4 6 3 1 -- radi
