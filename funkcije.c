@@ -262,6 +262,19 @@ int *mnozi(int *ostaci1, int *ostaci2, int n, int *ostaciSistema){
 	return ostaciPrevoda;
 }
 
+void aritUnosDek(int *broj1, int *broj2, int *n, int **ostaciSistema){
+	printf("Uneti prvi broj: ");
+	scanf("%d", broj1);
+	printf("Uneti drugi broj: ");
+	scanf("%d", broj2);
+	printf("Uneti broj ostataka sistema: ");
+	scanf("%d", n);
+	printf("Uneti ostatke sistema: ");
+	*ostaciSistema = unos(*n);
+
+	return ;
+}
+
 void dekadni(void){
 	int opcija, broj1, broj2, n, *ostaciSistema, *ostaci1, *ostaci2;
 	printf("1) Prevod u RBS\n"
@@ -281,69 +294,55 @@ void dekadni(void){
 			break;
 
 		case 2:
-			printf("Uneti prvi broj: ");
-			scanf("%d", &broj1);
-			printf("Uneti drugi broj: ");
-			scanf("%d", &broj2);
-			printf("Uneti broj ostataka sistema: ");
-			scanf("%d", &n);
-			printf("Uneti ostatke sistema: ");
-			ostaciSistema = unos(n);
+			aritUnosDek(&broj1, &broj2, &n, &ostaciSistema);
 
 			ostaci1 = uRBS(broj1, n, ostaciSistema);
 			ostaci2 = uRBS(broj2, n, ostaciSistema);
 
 			ispis(saberi(ostaci1, ostaci2, n, ostaciSistema), n);
+			free(ostaci1);
+			free(ostaci2);
 
 			break;
 
 		case 3:
-			printf("Uneti prvi broj: ");
-			scanf("%d", &broj1);
-			printf("Uneti drugi broj: ");
-			scanf("%d", &broj2);
-			printf("Uneti broj ostataka sistema: ");
-			scanf("%d", &n);
-			printf("Uneti ostatke sistema: ");
-			ostaciSistema = unos(n);
+			aritUnosDek(&broj1, &broj2, &n, &ostaciSistema);
 
 			ostaci1 = uRBS(broj1, n, ostaciSistema);
 			ostaci2 = uRBS(broj2, n, ostaciSistema);
 
 			ispis(oduzmi(ostaci1, ostaci2, n, ostaciSistema), n);
+			free(ostaci1);
+			free(ostaci2);
 			break;
 
 		case 4:
-			printf("Uneti prvi broj: ");
-			scanf("%d", &broj1);
-			printf("Uneti drugi broj: ");
-			scanf("%d", &broj2);
-			printf("Uneti broj ostataka sistema: ");
-			scanf("%d", &n);
-			printf("Uneti ostatke sistema: ");
-			ostaciSistema = unos(n);
+			aritUnosDek(&broj1, &broj2, &n, &ostaciSistema);
 
 			ostaci1 = uRBS(broj1, n, ostaciSistema);
 			ostaci2 = uRBS(broj2, n, ostaciSistema);
 
 			ispis(mnozi(ostaci1, ostaci2, n, ostaciSistema), n);
+			free(ostaci1);
+			free(ostaci2);
 			break;
 	}
 
+	free(ostaciSistema);
 	return ;
 }
 
-void aritUnosDek(int *broj1, int *broj2, int *n, int *ostaciSistema){
-			printf("Uneti prvi broj: ");
-			scanf("%d", broj1);
-			printf("Uneti drugi broj: ");
-			scanf("%d", broj2);
-			printf("Uneti broj ostataka sistema: ");
-			scanf("%d", n);
-			printf("Uneti ostatke sistema: ");
-			ostaciSistema = unos(*n);
+void aritUnosRBS(int *n, int **ostaciSistema, int **ostaci1, int **ostaci2){
+	printf("Uneti broj ostataka sistema: ");
+	scanf("%d", n);
+	printf("Uneti ostatke sistema: ");
+	*ostaciSistema = unos(*n);
+	printf("Uneti ostatke prvog broja: ");
+	*ostaci1 = unos(*n);
+	printf("Uneti ostatke drugog broja: ");
+	*ostaci2 = unos(*n);
 
-			return ;
+	return ;
 }
 
 void rbsBr(void){
@@ -365,45 +364,26 @@ void rbsBr(void){
 			break;
 
 		case 2:
-			printf("Uneti broj ostataka sistema: ");
-			scanf("%d", &n);
-			printf("Uneti ostatke sistema: ");
-			ostaciSistema = unos(n);
-			printf("Uneti ostatke prvog broja: ");
-			ostaci1 = unos(n);
-			printf("Uneti ostatke drugog broja: ");
-			ostaci2 = unos(n);
+			aritUnosRBS(&n, &ostaciSistema, &ostaci1, &ostaci2);
 			ispis(saberi(ostaci1, ostaci2, n, ostaciSistema), n);
+			free(ostaci2);
 			break;
 
 		case 3:
-			printf("Uneti broj ostataka sistema: ");
-			scanf("%d", &n);
-			printf("Uneti ostatke sistema: ");
-			ostaciSistema = unos(n);
-			printf("Uneti ostatke prvog broja: ");
-			ostaci1 = unos(n);
-			printf("Uneti ostatke drugog broja: ");
-			ostaci2 = unos(n);
+			aritUnosRBS(&n, &ostaciSistema, &ostaci1, &ostaci2);
 			ispis(oduzmi(ostaci1, ostaci2, n, ostaciSistema), n);
+			free(ostaci2);
 			break;
 
 		case 4:
-			printf("Uneti broj ostataka sistema: ");
-			scanf("%d", &n);
-			printf("Uneti ostatke sistema: ");
-			ostaciSistema = unos(n);
-			printf("Uneti ostatke prvog broja: ");
-			ostaci1 = unos(n);
-			printf("Uneti ostatke drugog broja: ");
-			ostaci2 = unos(n);
+			aritUnosRBS(&n, &ostaciSistema, &ostaci1, &ostaci2);
 			ispis(mnozi(ostaci1, ostaci2, n, ostaciSistema), n);
+			free(ostaci2);
 			break;
 	}
-
 	free(ostaciSistema);
 	free(ostaci1);
-	free(ostaci2);
+
 	return ;
 }
 
